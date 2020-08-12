@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">t
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -12,33 +12,35 @@
   </head>
 
   <body>
-    <div class="container-fluid text-center text-light bg-dark">
-        <h1>Weather Dashboard</h1>
-    </div>
+    <header>
+        <nav class="navbar-dark bg-dark p-3">
+          <h1 class="text-light text-center">Weather Dashboard</h1>
+        </nav>
+      </header>
     <div class="container">
         <div class="clearfix">
             <div class="col-4 float-left">
-                <nav class="navbar navbar-light bg-light shadow-lg p-3 mb-5 bg-white rounded">
+                <nav class="navbar navbar-light bg-light p-3 mb-5 bg-white rounded">
                     <h4>Search for a City:</h4>
                         <form class="form-inline">
                             <input id="city-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                             <button id="select-city" class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                         </form>
                     <form id="search-history" class="mt-1">
-    <!------- Search bar and display ------------>
+                                 <!------- Search bar and input display here ------------>
                     </form>
                 </nav>
             </div>
             <div class="col-8 float-right">
-                <div class="card bg-light text-dark p-2 rem shadow-lg p-3 mb-5 bg-white rounded" style="width: 710; height: 19rem;">
+                <div class="card bg-light text-dark p-2 rem p-3 mb-5 bg-white rounded" style="width: 710; height: 19rem;">
                     <div id="current-day"></div>
-    <!-------- weather displayed here----->
+                                     <!-------- weather displayed here----->
                     <div id="uvl-display"></div>
                 </div>
                     <br>
                     <h2>5 Day Forcast:</h2>
                 <div  id="5day" class="row">
-    <!-------- 5 day forcaste and icons displayed here.---------->
+                             <!-------- 5 day forcast and icons displayed here.---------->
                 </div>
             </div> 
         </div>
@@ -47,6 +49,6 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
