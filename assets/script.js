@@ -74,7 +74,7 @@ function citySearch(cityname) {
         $("#5day").empty();
         // for loop to dispplay results in html
         for (var i = 0; i < results.length; i += 8) {
-            // Creating a div
+           
             var fiveDayDiv = $("<div class='card shadow-lg text-white bg-primary mx-auto mb-10 p-2' style='width: 8.5rem; height: 11rem;'>");
 
            
@@ -124,12 +124,11 @@ generatePage();
 
 
 $("#select-city").on("click", function (event) {
-    // Preventing the button from trying to submit the form......
     event.preventDefault();
-    // Storing the city name........
+    // Storage for city names
     var cityInput = $("#city-input").val().trim();
 
-    //save search term to local storage.....
+    
     var textContent = $(this).siblings("input").val();
     var myStorageArray = [];
     myStorageArray.push(textContent);
@@ -147,7 +146,7 @@ function generatePage() {
     $("#search-history").prepend(psearch);
 }
 
-//Event deligation...
+// to prevent page from loading 
 $("#search-history").on('click', '.btn', function (event) {
     event.preventDefault();
     console.log($(this).text());
