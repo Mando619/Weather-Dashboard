@@ -137,3 +137,7 @@ $("#search-history").on('click', '.btn', function (event) {
     citySearch($(this).text());
 
 });
+
+generatePage();
+citySearch(cityName);
+    
