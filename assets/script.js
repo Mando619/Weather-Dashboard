@@ -2,11 +2,11 @@ moment().format('L');
 
 
 // function to get information pulled for cities
-function citySearch(cityName) {
+function citySearch(cityname) {
     let APIkey = "2f598171c3fda674d8b93c316fb6890e";
 
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=" + APIkey;
-    var queryURLforcast = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&units=imperial&appid=" + APIkey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=imperial&appid=" + APIkey;
+    var queryURLforcast = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityname + "&units=imperial&appid=" + APIkey;
 
     $.ajax({
         url: queryURL,
@@ -118,7 +118,7 @@ $("#select-city").on("click", function (event) {
     myStorageArray.push(textContent);
     localStorage.setItem('cityName', JSON.stringify(myStorageArray));
 
-    citySearch(cityName);
+    citySearch(cityname);
     generatePage();
 });
 
@@ -138,6 +138,4 @@ $("#search-history").on('click', '.btn', function (event) {
 
 });
 
-generatePage();
-citySearch(cityName);
     
