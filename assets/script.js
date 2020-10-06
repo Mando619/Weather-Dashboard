@@ -2,18 +2,11 @@ moment().format('L');
 
 
 // function to get information pulled for cities
-function citySearch(cityname) {
-
-
-
+function citySearch(cityName) {
     let APIkey = "2f598171c3fda674d8b93c316fb6890e";
 
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&units=imperial&appid=" + APIkey;
-    var queryURLforcast = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityname + "&units=imperial&appid=" + APIkey;
-
-
-
-
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=" + APIkey;
+    var queryURLforcast = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&units=imperial&appid=" + APIkey;
 
     $.ajax({
         url: queryURL,
@@ -31,11 +24,6 @@ function citySearch(cityname) {
         var humidityElement = $("<p>").text("Humidity: " + response.main.humidity);
         var temperatureElement = $("<p>").text("Temperature: " + response.main.temp);
         var windElement = $("<p>").text("Wind Speed: " + response.wind.speed);
-
-
-
-
-
 
         if (currentWeather === "Snow") {
             var weatherIcon = $("<img").attr("src",  "http://openweathermap.org/img/wn/13d.png");
@@ -118,10 +106,6 @@ function citySearch(cityname) {
 
     });
 }
-generatePage();
-
-
-
 
 $("#select-city").on("click", function (event) {
     event.preventDefault();
@@ -134,7 +118,7 @@ $("#select-city").on("click", function (event) {
     myStorageArray.push(textContent);
     localStorage.setItem('cityName', JSON.stringify(myStorageArray));
 
-    citySearch(cityInput);
+    citySearch(cityName);
     generatePage();
 });
 
